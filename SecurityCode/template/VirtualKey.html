@@ -1,0 +1,86 @@
+﻿<style>
+    .virtual_keyboard_wrap {
+        /*
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        */
+    }
+
+        .virtual_keyboard_wrap .vk_item {
+            box-sizing: border-box;
+            float: left;
+            width: 33.33%;
+            height: 50px;
+            line-height: 50px;
+            border-top: 1px #ebebeb solid;
+            border-right: 1px #ebebeb solid;
+            background-color: #fff;
+            font: 600 16px/50px Arial,"Hiragino Sans GB","Microsoft Yahei",Simsun,sans-serif;
+            color: #333;
+            text-align: center;
+        }
+
+            .virtual_keyboard_wrap .vk_item:nth-of-type(3n) {
+                border-right: 0;
+            }
+
+            .virtual_keyboard_wrap .vk_item.disabled, .virtual_keyboard_wrap .vk_item.delete {
+                background-color: #ebebeb;
+            }
+
+                .virtual_keyboard_wrap .vk_item.delete i {
+                    position: relative;
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: -5px;
+                    border-radius: 2px;
+                    background-color: #fff;
+                    font: 600 16px/20px Simsun,sans-serif;
+                    color: #ccc;
+                    vertical-align: middle;
+                }
+
+                    .virtual_keyboard_wrap .vk_item.delete i:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: -19px;
+                        width: 0;
+                        height: 0;
+                        border: 10px transparent dashed;
+                        border-right: 10px #fff solid;
+                    }
+
+    .vk_item_2 {
+        box-sizing: border-box;
+        float: left;
+        width: 33.33%;
+        height: 50px;
+        line-height: 50px;
+        border-top: 1px #ebebeb solid;
+        border-right: 1px #ebebeb solid;
+        background-color: #ebebeb;
+        font: 600 16px/50px Arial,"Hiragino Sans GB","Microsoft Yahei",Simsun,sans-serif;
+        color: #333;
+        text-align: center;
+    }
+</style>
+
+<div class="virtual_keyboard_wrap" id="virtualKeyboard">
+    <ul>
+        <li class="vk_item" attrId="1">1</li>
+        <li class="vk_item" attrid="2">2</li>
+        <li class="vk_item" attrid="3">3</li>
+        <li class="vk_item" attrid="4">4</li>
+        <li class="vk_item" attrid="5">5</li>
+        <li class="vk_item" attrid="6">6</li>
+        <li class="vk_item" attrid="7">7</li>
+        <li class="vk_item" attrid="8">8</li>
+        <li class="vk_item" attrid="9">9</li>
+        <li class="vk_item_2"></li>
+        <li class="vk_item" attrid="0">0</li>
+        <li class="vk_item delete" attrid="delete"><i>&times;</i></li>
+    </ul>
+</div>
